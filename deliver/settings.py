@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'allauth',  
     'allauth.account',
     'allauth.socialaccount',
+    'crispy_forms',
 
 ]
 
@@ -63,6 +64,7 @@ SITE_ID = 1
 EMAIL_VERIFICATION = True
 
 LOGIN_REDIRECT_URL = '/already-logged-in/'
+LOGIN_URL = '/accounts/login'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -131,7 +133,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -147,3 +149,5 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

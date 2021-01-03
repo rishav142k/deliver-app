@@ -1,5 +1,4 @@
 {% extends "customer/base.html" %}
-
 {% load i18n %}
 {% load account socialaccount %}
 
@@ -24,12 +23,12 @@ of your existing third party accounts. {% endblocktrans %}</p>
 </div>
 {% else %}
 <p class="col-md-10 col-sm-12 offset-md-1 p-4 text-center">{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+<a  href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 {% endif %}
 
 <form class="login col-md-10 col-sm-12 offset-md-1 p-4 text-center" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
-  {{ form.as_p }}
+  {{ form.as_p}}
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
