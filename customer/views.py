@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.core.mail import send_mail
 from .models import MenuItem, Category, OrderModel
+from django.http import JsonResponse
 
 
 class Index(View):
@@ -98,5 +99,5 @@ class OrderConfirmation(View):
         return render(request, 'customer/order_confirmation.html', context)
 
 class Order_complete(View):
-    def get(self, request, pk, *args, **kwargs):
-        pass
+    def get(self, request,*args, **kwargs):
+        return render(request, 'customer/order_confirmed.html')

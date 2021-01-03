@@ -1,0 +1,17 @@
+{% extends "customer/base.html" %}
+
+{% block content %}
+<div class="container mb-5">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8 col-sm-12 offset-md-1 p-4 text-center">
+            <h1>Dashboard!</h1>
+
+            {% if user.is_authenticated %}
+            <h3 class="row justify-content-center mt-5 alert alert-success"> YAY!</h3>    
+            {% else %}
+                 <h3 class="row justify-content-center mt-5 alert alert-warning"> You are not authenticated as staff. Login with staff credentials.</h3>   
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock content %}
