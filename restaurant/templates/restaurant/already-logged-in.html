@@ -2,10 +2,10 @@
 
 {% block content %}
 
-<div class="row justify-content-center mt-5">
-    <div class="col-md-8 col-sm-12 offset-md-1 p-4 text-center">
-        <h1>You are logged in and authenticated!</h1>
-        <a href="{% url 'dashboard' %}"> Go To Dashboard?</a>
+<div class="row justify-content-center mt-5 text-center">
+    <div >
+        <h1 class="col-md-10 col-sm-12 offset-md-1 p-5 text-center">You are logged in and authenticated!</h1>
+        <a class="text-center btn btn-primary active mt-5" href="{% url 'dashboard' %}"> Go To Dashboard?</a>
     </div>
 </div>
 

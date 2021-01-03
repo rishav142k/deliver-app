@@ -19,18 +19,20 @@ class About(View):
 class Order(View):
     def get(self, request, *args, **kwargs):
         # get every item from each category
-        appetizers = MenuItem.objects.filter(
-            category__name__contains='Appetizer')
-        entres = MenuItem.objects.filter(category__name__contains='Entre')
+        starters = MenuItem.objects.filter(category__name__contains='Starter')
         desserts = MenuItem.objects.filter(category__name__contains='Dessert')
-        drinks = MenuItem.objects.filter(category__name__contains='Drink')
+        main_courses = MenuItem.objects.filter(category__name__contains='Main Course')
+        entres = MenuItem.objects.filter(category__name__contains='Entre')
+
+
 
         # pass into context
         context = {
-            'appetizers': appetizers,
+            'starters' : starters,
             'entres': entres,
             'desserts': desserts,
-            'drinks': drinks,
+            'main_courses' : main_courses,
+
         }
 
         # render the template
@@ -60,8 +62,9 @@ class Order(View):
 
             order_items['items'].append(item_data)
 
-            price = 0
-            item_ids = []
+
+        price = 0
+        item_ids = []
 
         for item in order_items['items']:
             price += item['price']
