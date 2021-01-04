@@ -63,6 +63,8 @@
 ## About The Project
 ![Product Name Screen Shot][product-screenshot]
 
+This project is built on Django along with bootstrap and CSS. It supports multiple login along with checks whether the user is staff or not. There is a hidden dashboard page for the staff members where they can see the monthly revenue along with the total number of orders placed that month. Customers can buy items from menu and pay from credit card or PayPal. 
+
 
 ### Built With
 * [Bootstrap](https://getbootstrap.com)
