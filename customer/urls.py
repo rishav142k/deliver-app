@@ -8,4 +8,6 @@ urlpatterns = [
     path('order-confirmation/<int:pk>/', views.OrderConfirmation.as_view(),
         name='order-confirmation'),
     path('order-complete/', views.Order_complete.as_view(), name = "order-complete"),
+    path('menu/', views.Menu.as_view(), name = "menu"),
+    path('menu/search/', views.MenuSearch.as_view, name = "menu-search")
 ]

@@ -21,4 +21,5 @@ from . import views
 urlpatterns = [
     path('already-logged-in/', views.AlreadyLoggedIn.as_view(), name =  "already-logged-in"),
     path('dashboard/', views.Dashboard.as_view(), name = "dashboard"),
+    path('order-details/<int:pk>/', views.OrderDetails.as_view(), name = "order-details"),
 ]

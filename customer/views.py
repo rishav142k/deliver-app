@@ -114,3 +114,16 @@ class OrderConfirmation(View):
 class Order_complete(View):
     def get(self, request,*args, **kwargs):
         return render(request, 'customer/order_confirmed.html')
+
+class Menu(View):
+    def get(self, request, *args, **kwargs):
+        menu_items= MenuItem.objects.all()
+        context = {
+            'menu_items' : menu_items,
+        }
+        return render(request, 'customer/menu.html', context)
+
+class MenuSearch(View):
+    def get(self, request, *args, **kwargs): 
+        pass
+    

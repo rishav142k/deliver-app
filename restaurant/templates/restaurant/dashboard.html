@@ -1,16 +1,25 @@
 {% extends 'restaurant/base.html' %}
 
 {% block content %}
+    <div class="row justify-content-center mt-3">
+        <h1 class="display-3 col-md-5 col-sm-12 p-4 text-center"> {{ month }} , {{ year }}</h1>
+    </div>
+
     <div class="container">
         <div class="row justify-content-center mt-3">
+            
             <div class="card col-md-5 mr-3">
-                <h4 class="text-center pt-2">Today's Total Revenue</h4>
-                <h1 class="text-center" style="color: green;">${{ total_revenue }}</h1>
+                <h4 class="text-center pt-2">Revenue</h4>
+                <h1 class="text-center" style="color: green;">₹ {{ revenue }}</h1>
             </div>
 
             <div class="card col-md-5 mr-3">
-                <h4 class="text-center pt-2">Today's Total Orders</h4>
+                <h4 class="text-center pt-2">Orders</h4>
                 <h1 class="text-center" style="color: #ad0003;">{{ total_orders }}</h1>
+            </div>
+            <div class="card col-md-5 mr-3 mt-5">
+                <h4 class="text-center pt-2">Paid Orders</h4>
+                <h1 class="text-center" style="color: gold;">{{ total_paid_orders }}</h1>
             </div>
         </div>
 
@@ -28,6 +37,8 @@
                             <th scope="col">State</th>
                             <th scope="col">Zip Code</th>
                             <th scope="col">Is Paid?</th>
+                            <th scope="col">Details</th>
+                            <th scope="col"> Shipped?</th>
                         </tr>
                     </thead>
 
@@ -44,6 +55,17 @@
                             <td>{{ order.zip_code }}</td>
                             <td>
                                 {% if order.is_paid %}
+                                <i style="color: green;" class="fas fa-check"></i>
+                                {% else %}
+                                <i style="color: red;" class="fas fa-times"></i>
+                                {% endif %}
+
+                            </td>
+                            <td> 
+                                <a href="{% url 'order-details' order.pk %}"><i class="far fa-edit"></i></a>
+                            </td>
+                            <td>
+                                {% if order.is_shipped %}
                                 <i style="color: green;" class="fas fa-check"></i>
                                 {% else %}
                                 <i style="color: red;" class="fas fa-times"></i>
