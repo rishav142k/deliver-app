@@ -17,7 +17,11 @@
 
   <p align="center">
     <a align="center" href="https://github.com/rishav142k/deliver-app/">
+<<<<<<< HEAD
     <img src="img/logo.jpg" alt="Logo" width="80" height="80">
+=======
+    <img src="img/logo.png" alt="Logo" width="80" height="80">
+>>>>>>> 08232f1182640bfdb7cc265e033c67b8323a671a
   </a>
   <br>
     A food delivery web app to order your favorite meals. Supports PayPal as well. Integrated seperate login for customers and staff members. Staff members have exclusive access to dashboard where they can see their revenue generated. Also has the option to initialise shipping for a particular product.
@@ -158,4 +162,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [issues-url]: https://github.com/rishav142k/deliver-app/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/rishav-sharma-142k/
+<<<<<<< HEAD
 [product-screenshot]: img/screenshot.gif
+=======
+[product-screenshot]: img/screenshot.png
+>>>>>>> 08232f1182640bfdb7cc265e033c67b8323a671a
